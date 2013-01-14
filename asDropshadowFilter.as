@@ -1,0 +1,2 @@
+// distance:Number, angle:Number, color:uint, alpha:Number, blurX:Number, blurY:Number, strength:Number, quality:int, inner:Boolean, knockout:Boolean, hideObject:Boolean
+mc.filters = [new DropShadowFilter(5, 90, 0x000000, 10, 20, 20, 1, 1, false, false, false)];

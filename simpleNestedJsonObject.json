@@ -1,0 +1,35 @@
+{
+    "obj0": {
+        "item0": "value",
+        "item1": "value",
+        "item2": [
+            {
+                "subItem0": "value",
+                "subItem1": "value",
+                "subItem2": "value"
+            }
+        ]
+    },
+    "obj1": {
+        "item0": "value",
+        "item1": "value",
+        "item2": [
+            {
+                "subItem0": "value",
+                "subItem1": "value",
+                "subItem2": "value"
+            }
+        ]
+    },
+    "obj2": {
+        "item0": "value",
+        "item1": "value",
+        "item2": [
+            {
+                "subItem0": "value",
+                "subItem1": "value",
+                "subItem2": "value"
+            }
+        ]
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <style type="text/css">
+            p{
+                display: block;
+                font: normal normal normal 18px Georgia, serif;
+            }
+
+            .container{
+                position: relative;
+                width: 286px;
+                height: 400px;
+                overflow: hidden;
+            }
+            .container-form{
+                position: absolute;
+                background-color: #eeeeee;
+                width: 266px;
+                height: 266px;
+                padding: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -khtml-border-radius: 10px;
+            }
+            .container-confirm{
+                position: absolute;
+                background-color: #eeeeee;
+                width: 266px;
+                height: 266px;
+                left: -300px;
+                padding: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -khtml-border-radius: 10px;
+            }
+            .container-checkbox{
+                display: inline-block;
+                width: 240px;
+            }
+            .inp-textfield{
+                width: 260px;
+                height: 30px;
+                font: normal normal normal 18px Georgia, serif;
+                border: solid 1px #cccccc;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -khtml-border-radius: 4px;
+                border-radius: 4px;
+            }
+            .inp-checkbox{
+                padding: 0;
+                margin: 0;
+                vertical-align: top;
+                margin: 4px 10px 0 0;
+            }
+            .inp-label{
+                display: block;
+                font: normal normal normal 18px Georgia, serif;
+            }
+            .inp-checkbox-label{
+                font: normal normal normal 18px Georgia, serif;
+            }
+            .inp-submit{
+                height: 30px;
+                font-family: Georgia, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="jquerySubmitForm.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                form.initForm();
+            });
+        </script>
+        <p>Please sign up for our newsletter below</p>
+        <div class="container">
+            <div class="container-form">
+                <form id="submit-form">
+                    <p>
+                        <label class="inp-label" for="tf-name">Enter your name</label>
+                        <input class="inp-textfield" type="text" id="tf-name" />
+                    </p>
+                    <p>
+                        <label class="inp-label" for="tf-email">Enter your email</label>
+                        <input class="inp-textfield" type="text" id="tf-email" />
+                    </p>
+                    <input class="inp-checkbox" type="checkbox" id="cb-termsAndConditions" />
+                    <div class="container-checkbox">
+                        <label class="inp-checkbox-label" for="cb-termsAndConditions">I have read and understood the terms and conditions</label>
+                    </div>
+                    <p><input class="inp-submit" type="submit" id="btn-submit" value="SEND" /></p>
+                </form>
+            </div>
+            <div class="container-confirm"><span id="confirm-message"></span></div>
+        </div>
+    </body>
+</html>
