@@ -2,20 +2,16 @@
   var MyPlugin = function(element, options) {
     var elem = $(element);
     var obj = this;
-    var settings = $.extend({
-      param : 'defaultValue'
-    }, options || {});
+    var settings = $.extend({param : 'defaultValue'}, options || {});
 
     // Public method - can be called from client code
     this.publicMethod = function() {
       init();
-      console.log('public method called!');
     };
 
     // Private method - can only be called from within this object
     var init = function() {
       elem.text('Script file init');
-      console.log('private method called!');
     };
   };
 
