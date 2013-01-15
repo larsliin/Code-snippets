@@ -1,5 +1,5 @@
 // finds closests value in array
-function roundTo(maxnumber, number){
+function roundTo(increment, value){
     
-    return Math.round(number / maxnumber) * maxnumber;
+    return Math.round(value / increment) * increment;
 }
