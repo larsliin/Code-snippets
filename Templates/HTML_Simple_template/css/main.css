@@ -29,3 +29,40 @@ table {
 	border-spacing: 0;
 }
 /*------------ -reset css end --------------*/
+
+/****************************************************
+ * MEDIA QUERIES
+ ****************************************************/
+
+/* 320px, 480px, 768px, 1024px */
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	body{
+		background-color: #f00; 
+	}
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-width : 480px) {
+	body{
+		background-color: #0f0; 
+	}
+}
+/* Tablet (portrait) ----------- */
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+	body{
+		background-color: #00f; 
+	}
+}
+/* Tablet (landscape) ----------- */
+@media only screen and (min-width : 769px) and (max-width : 1024px) {
+	body{
+		background-color: #ff0; 
+	}
+}
+/* DESKTOP ----------- */
+@media only screen and (min-width : 1025px) {
+	body{
+		background-color: #0ff; 
+	}
+}
