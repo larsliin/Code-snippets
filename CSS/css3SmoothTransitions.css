@@ -1,0 +1,19 @@
+/* remember to add '-webkit-backface-visibility: hidden;' 
+ and '-webkit-transform: translateX(0%);' to ensure a smooth transition
+ and no unwanted blinking or flashing
+*/
+.wrapper{
+  position: absolute;
+  
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+  
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(0%);
+}
+.wrapper.openmenu{
+	-webkit-transform: translateX(-50%);
+}
