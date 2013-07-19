@@ -11,4 +11,4 @@ var isIE = ($.browser.msie) ? true : false;
 var isDeviceMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ? true : false;
 
 // is browser mobile IOS
-var isDeviceMobile = (/iPhone|iPad|iPod/i.test(navigator.userAgent)) ? true : false;
+var isDeviceIOS= (/iPhone|iPad|iPod/i.test(navigator.userAgent)) ? true : false;
