@@ -6,3 +6,5 @@ $('img.preload').one('load', function () {
 }).each(function () {
     if (this.complete) $(this).load();
 });
+// load event not triggered in IE; forced by reassigning src
+//if (isIE) $(this).attr("src", $(this).attr("src"));
