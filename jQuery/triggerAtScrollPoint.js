@@ -1,17 +1,22 @@
 // runs method when module is visible in viewport
-var $this = $('.module');
 var isFirstRun = true;
 
 $(window).bind('scroll', scrollHandler).trigger('scroll');            
 
 function scrollHandler() {
-    var scrollTriggerPoint = $this.position().top - $this.height();
-    if ($(window).scrollTop() > scrollTriggerPoint && isFirstRun) {
+    if (isInViewport($('.module')) && isFirstRun) {
         isFirstRun = false;
         trigger();
     }
 }
 
+// returns true if element is visible in viewport
+function isInViewport($mod) {
+    var scrollTriggerPoint = $mod.position().top - $mod.height();
+    var bool = $(window).scrollTop() > scrollTriggerPoint ? true : false;
+    return bool;
+}
+
 function trigger() {
-    // run once when page scrolling point has reached
+    
 }
