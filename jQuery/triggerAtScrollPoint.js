@@ -10,13 +10,13 @@ function scrollHandler() {
     }
 }
 
+function trigger() {
+    
+}
+
 // returns true if element is visible in viewport
 function isInViewport($mod) {
     var scrollTriggerPoint = $mod.position().top - $mod.height();
     var bool = $(window).scrollTop() > scrollTriggerPoint ? true : false;
     return bool;
-}
-
-function trigger() {
-    
 }
