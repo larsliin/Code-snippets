@@ -6,11 +6,11 @@ $(window).bind('scroll', scrollHandler).trigger('scroll');
 function scrollHandler() {
     if (isInViewport($('.module')) && isFirstRun) {
         isFirstRun = false;
-        trigger();
+        triggerWhenInViewport();
     }
 }
 
-function trigger() {
+function triggerWhenInViewport() {
     
 }
 
