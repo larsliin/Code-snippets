@@ -1,3 +1,23 @@
+/*
+HTML/Javascript (no jQuery) example
+http://msdn.microsoft.com/en-us/library/ie/hh924823(v=vs.85).aspx
+
+Firefox api documentation
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
+
+Opera api documentation
+http://dev.opera.com/articles/view/everything-you-need-to-know-about-html5-video-and-audio/
+
+Microsoft api documentation
+http://msdn.microsoft.com/en-us/library/ie/hh772500(v=vs.85).aspx
+
+Safari api documentation
+https://developer.apple.com/library/safari/documentation/AudioVideo/Reference/HTMLMediaElementClassReference/HTMLMediaElement/HTMLMediaElement.html
+
+Video events
+http://www.w3.org/2010/05/video/mediaevents.html
+*/
+
 (function ($) {
     function html5video() {
 
