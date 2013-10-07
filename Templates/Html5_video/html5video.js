@@ -14,18 +14,46 @@
                 $fallbackImage.show();
                 $video.remove();
             } else {
-                $video.on('timeupdate', videoTimeUpdateHandler);
-                $video.on('play', videoPlayHandler);
-                $video.on('ended', videoCompleteHandler);
-
-                // autoplay video to force preload
-                $video.get(0).play();
+                var video = document.getElementById('BeoLab19DesignInspiration');
+                var videoInitReadyInterval = setInterval(function () { videoInitReadyHandler(video, videoInitReadyInterval); }, 500);
+                videoInitReadyHandler(video, videoInitReadyInterval);
             }
         }
 
         /*********************************************************
         HANDLERS
         *********************************************************/
+        function videoInitReadyHandler(video, interval) {
+            if (ideo.video) {
+                switch (readyState) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        videoInit(video, interval);
+                        break;
+                    case 4:
+                        videoInit(video, interval);
+                        break;
+                }            
+            }
+        }
+        
+        function videoInit(video, interval){
+            clearMyInterval(interval);
+            
+            $video.on('timeupdate', videoTimeUpdateHandler);
+            $video.on('play', videoPlayHandler);
+            $video.on('ended', videoCompleteHandler);
+
+            // autoplay video to force preload
+            $video.get(0).play();
+            
+        }
+        
         function videoTimeUpdateHandler(e) {
             videostatus.currenttime = e.currentTarget.currentTime;
         }
@@ -43,6 +71,13 @@
         *********************************************************/
         function getStringAsNumber(num) {
             return Number((num.split('px'))[0]);
+        }
+        
+        function clearMyInterval(i) {
+           if (i) {
+                clearInterval(i);
+                i = null;
+            }
         }
 
         init();
