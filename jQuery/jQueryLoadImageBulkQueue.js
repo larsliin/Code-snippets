@@ -22,6 +22,7 @@ function loadImages($i) {
         var sprite = new Image();
         sprite.onload = function () {
             deferred.resolve();
+            $this.trigger('image_loaded');
         };
         sprite.src = src;
         return deferred.promise();
