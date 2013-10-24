@@ -1,6 +1,7 @@
 var $this = $(this);
 var $images = $this.find($('img'));
 
+$this.bind('image_loaded', ImageLoadedHandler);
 $this.bind('images_loaded', allImagesLoadedHandler);
 
 loadImages($images);
@@ -31,4 +32,8 @@ function loadImages($i) {
     
 function allImagesLoadedHandler(e) {
     // all images loaded
+}
+
+function ImageLoadedHandler(e) {
+    // image loaded
 }
