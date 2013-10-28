@@ -13,6 +13,13 @@
         var init = function() {
             elem.text('Script file init');
         };
+        
+        // removes and kills plugin
+        var destroy = function () {
+            $this.remove();
+            $this.removeData();            
+            $this = null;
+        };
     };
 
     $.fn.myplugin = function(options) {
