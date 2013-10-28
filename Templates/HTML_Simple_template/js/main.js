@@ -1,3 +1,5 @@
+// tips on creating custom plugins
+// http://acuriousanimal.com/blog/2013/02/25/things-i-learned-creating-a-jquery-plugin-part-ii/
 (function($) {
     var MyPlugin = function(element, options) {
         var elem = $(element);
