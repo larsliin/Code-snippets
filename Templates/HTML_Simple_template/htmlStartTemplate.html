@@ -21,7 +21,7 @@
 
         <script type="text/javascript">
         $(document).ready(function() {
-            $('.my-element').myplugin();
+            $('.my-element').myplugin({ param1: 'value', param2: 'value',  param3 : 'value'});
             var myplugin = $('.my-element').data('myplugin');
             myplugin.publicMethod();
         })
