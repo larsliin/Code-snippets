@@ -6,22 +6,19 @@
         var obj = this;
         var settings = $.extend({param : 'defaultValue'}, options || {});
 
-        // Public method - can be called from client code
-        this.publicMethod = function() {
-            init();
+        // public method: removes and kills plugin
+        this.destroy = function () {
+            $this.remove();
+            $this.removeData();            
+            $this = null;
         };
-
+        
         // Private method - can only be called from within this object
         var init = function() {
             elem.text('Script file init');
         };
         
-        // removes and kills plugin
-        var destroy = function () {
-            $this.remove();
-            $this.removeData();            
-            $this = null;
-        };
+        init();
     };
 
     $.fn.myplugin = function(options) {
