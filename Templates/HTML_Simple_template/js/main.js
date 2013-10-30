@@ -4,7 +4,8 @@
     var MyPlugin = function(element, options) {
         var elem = $(element);
         var obj = this;
-        var settings = $.extend({param : 'defaultValue'}, options || {});
+        var defaultSettings = { param1: null, param2: null,  param3 : null};
+        var settings = $.extend(defaultSettings, options || {});
 
         // public method: removes and kills plugin
         this.destroy = function () {
