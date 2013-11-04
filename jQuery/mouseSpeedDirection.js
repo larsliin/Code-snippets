@@ -1,15 +1,22 @@
 var mouse = {speed : 0, horizontal : 0, vertical : 0};
 $(document).bind('mousemove', function (e) {
     // track mouse speed and direction
-    var ms = trackMouseSpeed(e, function (v) {console.log('mousespeed', v);});
+    var ms = trackMouseSpeed(e, function (v) {
+        mouse.speed = v;
+        console.log('mousespeed', mouse.speed);
+    });
+    
     var md = trackMouseDirection(e, function (v) {
-      console.log('vertical direction', v.vertical);console.log('horizontal direction', v.horizontal);
+        mouse.horizontal = v.horizontal;
+        mouse.vertical = v.vertical;
+        console.log('horizontal direction', mouse.horizontal);
+        console.log('vertical direction', mouse.vertical);
     });
 
-    $(document).on('mousemove', ms).one('mouseup', function () {
+    $(document).on('mousedown touchstart', ms).one('mouseup', function () {
         $(document).off('mousemove', ms);
     });
-    $(document).on('mousemove', md).one('mouseup', function () {
+    $(document).on('mousedown touchstart', md).one('mouseup', function () {
         $(document).off('mousemove', md);
     });
     
