@@ -1,8 +1,6 @@
 // returns bool if element has attribute
-function hasAttr($e, a){
-    var attr = $e.attr(a); 
-    var has = (typeof attr !== 'undefined' && attr !== false) ? true : false;
-    return has;
+function hasAttr($elem, attr){
+    return typeof $elem.attr(attr) !== 'undefined' && $elem.attr(attr) !== false ? true : false;
 }
 
 console.log(hasAttr($myelement, 'id'));
