@@ -2,7 +2,7 @@
 // http://acuriousanimal.com/blog/2013/02/25/things-i-learned-creating-a-jquery-plugin-part-ii/
 (function($) {
     var MyPlugin = function(element, options) {
-        var elem = $(element);
+        var $this = $(element);
         var obj = this;
         var defaultSettings = { param1: null, param2: null,  param3 : null};
         var settings = $.extend(defaultSettings, options || {});
@@ -14,9 +14,14 @@
             $this = null;
         };
         
+        this.publicMethod = function () {
+            
+            elem.append('<br />##Public method called##');
+        };
+
         // Private method - can only be called from within this object
         var init = function() {
-            elem.text('Script file init');
+            elem.append('##Script file init##');
         };
         
         init();
