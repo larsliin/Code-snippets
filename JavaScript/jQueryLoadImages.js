@@ -1,5 +1,5 @@
 var $images = $('img');
-var imgTotal = $img.length;
+var imgTotal = $images.length;
 var loadImageCount = 0;
 
 function loadImage(j){
