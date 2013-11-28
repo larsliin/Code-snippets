@@ -11,7 +11,7 @@ function loadImage(j){
     }).each(function () {
         if (this.complete) $(this).load();
     });
-    // ie needs the sourse reapplied
+    // ie needs the source reapplied
     $img.attr('src', src);
 }
 
