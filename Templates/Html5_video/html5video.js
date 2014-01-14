@@ -21,8 +21,7 @@ http://www.w3.org/2010/05/video/mediaevents.html
 (function ($) {
     function html5video() {
 
-        var $video = $('video');
-        var $fallbackImage = $('img');
+        var $video = $('#video_id');
         var videostatus = {isplaying : false, currenttime : 0};
         var isIE8 = (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) === 8) ? true : false;
         var isIE = ($.browser.msie) ? true : false;
@@ -34,7 +33,7 @@ http://www.w3.org/2010/05/video/mediaevents.html
                 $fallbackImage.show();
                 $video.remove();
             } else {
-                var video = document.getElementById('BeoLab19DesignInspiration');
+                var video = document.getElementById('video_id');
                 var videoInitReadyInterval = setInterval(function () { videoInitReadyHandler(video, videoInitReadyInterval); }, 500);
                 videoInitReadyHandler(video, videoInitReadyInterval);
             }
@@ -44,8 +43,8 @@ http://www.w3.org/2010/05/video/mediaevents.html
         HANDLERS
         *********************************************************/
         function videoInitReadyHandler(video, interval) {
-            if (video.video) {
-                switch (readyState) {
+            if (video) {
+                switch (video.readyState) {
                     case 0:
                         break;
                     case 1:
