@@ -44,7 +44,7 @@ http://www.w3.org/2010/05/video/mediaevents.html
         HANDLERS
         *********************************************************/
         function videoInitReadyHandler(video, interval) {
-            if (ideo.video) {
+            if (video.video) {
                 switch (readyState) {
                     case 0:
                         break;
