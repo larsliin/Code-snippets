@@ -16,12 +16,12 @@
         
         this.publicMethod = function () {
             
-            elem.append('<br />##Public method called##');
+            $this.append('<br />##Public method called##');
         };
 
         // Private method - can only be called from within this object
         var init = function() {
-            elem.append('##Script file init##');
+            $this.append('##Script file init##');
         };
         
         init();
