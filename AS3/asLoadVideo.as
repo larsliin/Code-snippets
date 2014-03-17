@@ -24,7 +24,7 @@ videoPlayer.name = "videoPlayer";
 
 videoPlayer.attachNetStream(ns);
 
-ns.play("media/heima_720p_500_1Mbps.flv");
+ns.play("http://www.helpexamples.com/flash/video/cuepoints.flv");
 
 addChild(videoPlayer);
 
