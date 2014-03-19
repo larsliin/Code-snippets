@@ -1,5 +1,5 @@
 // resizes to fullscreen, centers with overflow
-function resizeVideo(image) : void {
+function resizeElement(image) : void {
 	var widthRatio : Number = stage.stageWidth / image.width;
 	var heightRatio : Number = stage.stageHeight / image.height;
 	var ratio : Number = widthRatio;
