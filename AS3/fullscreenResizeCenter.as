@@ -1,4 +1,5 @@
 // resizes to fullscreen, centers with overflow
+//http://stackoverflow.com/questions/8158012/how-to-scale-an-image-to-full-screen-using-javascript
 function resizeElement(image) : void {
 	var widthRatio : Number = stage.stageWidth / image.width;
 	var heightRatio : Number = stage.stageHeight / image.height;
