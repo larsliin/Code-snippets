@@ -1,5 +1,6 @@
 // resize and center element according to window dimensions
 // overflow is hidden
+// http://stackoverflow.com/questions/8158012/how-to-scale-an-image-to-full-screen-using-javascript
 function scale(obj) {
 	var widthRatio = $(window).width() / obj.orgwidth;
 	var heightRatio = $(window).height() / obj.orgheight;
