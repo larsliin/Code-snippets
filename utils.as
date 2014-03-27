@@ -3,14 +3,51 @@ package {
 	import flash.geom.Matrix;
 	import flash.display.MovieClip;
 	import flash.display.Shape;
+	import flash.display.Stage;
 
 	/**
 	 * @author larlii
 	 */
-	public class ShapeUtils extends MovieClip{
+	public class Utils extends MovieClip{
 		
+		public function Utils() {
+		}
 		
-		public function ShapeUtils() {
+		// scale to stage
+		public function scaleAndCenter(object : DisplayObject, originalWidth : Number, originalHeight : Number, stage : Stage) : void {
+			var widthRatio : Number = stage.stageWidth / originalWidth;
+			var heightRatio : Number = stage.stageHeight / originalHeight;
+			var ratio : Number = widthRatio;
+			var top : Number;
+			var left : Number;
+
+			if (widthRatio * originalHeight < stage.stageHeight) {
+				ratio = heightRatio;
+				top = 0;
+				left = ((originalWidth * ratio) - stage.stageWidth) / 2;
+			} else {
+				top = ((originalHeight * ratio) - stage.stageHeight) / 2;
+				left = 0;
+			}
+
+			object.x = - 1 * left;
+			object.y = - 1 * top;
+			object.width = originalWidth * ratio;
+			object.height = originalHeight * ratio;
+		}
+		
+		public function scaleToStagewidth(object : DisplayObject, originalWidth : Number, originalHeight : Number, stage : Stage) : void {
+			var widthRatio : Number = stage.stageWidth / originalWidth;
+			object.width = stage.stageWidth;
+			object.height = originalHeight * widthRatio;
+
+			if (object.height < stage.stageHeight) {
+				object.x = 0;
+				object.y = 0;
+			} else {
+				object.x = 0;
+				object.y = - 1 * ((object.height - stage.stageHeight) / 2);
+			}
 		}
 		
 		public function getRoundCornerShape(color:int,width:Number,height:Number,round:Number):MovieClip{
