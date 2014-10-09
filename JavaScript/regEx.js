@@ -15,3 +15,7 @@ function isNumber(number) {
 	var filter = /[^0-9\.]/g;
 	return !filter.test(number);
 }
+
+function stripLinebreaks(str){
+	return str.replace(/<br\s*[\/]?>/gi, "");
+}
