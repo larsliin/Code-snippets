@@ -1,0 +1,25 @@
+<body>
+<div id="debug" style="height: 12px; position: fixed; top: 0; padding: 20px; width: 100%; background-color: #fff; z-index:99999;"></div
+</body>
+
+<script>
+  $(document).on('ready', function(){
+    var debug = $('#debug');
+    var debugTimer;
+    debug.bind("DOMSubtreeModified", function () {
+      if(debugTimer){
+          clearTimeout(debugTimer);
+          debugTimer = null;
+      }
+      debugTimer = setTimeout(function () {
+          debug.text('');
+          clearTimeout(debugTimer);
+          debugTimer = null;
+      }, 2000);
+    });
+    
+    $(this).on('click', function(){
+      debug.text('document clicked!');
+    });
+  });
+</script>
