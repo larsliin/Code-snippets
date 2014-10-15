@@ -8,3 +8,14 @@ $('img.preload').one('load', function () {
 });
 // load event not triggered in IE; forced by reassigning src
 //if (isIE) $('img.preload').attr("src", $('img.preload').attr("src"));
+
+
+// IE8 still misses the onload event even if src is set after listener
+// setting af timeout will make IE8 catch the event though. Ugly but true
+var myImage = new Image();
+myImage.onload = doSomething;
+
+var timer = setTimeout(function(){
+    timer = null;
+    myImage.src = "img/somePic.jpg";
+},300);
