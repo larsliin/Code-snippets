@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<!--
+    
+    How to autogenerate sprite sheets:
+    http://www.smashingmagazine.com/2014/10/15/create-assets-for-multiple-scale-factors/
+
+    Open PSD to see example
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Retina icons examples</title>
+
+    <style>
+        .logo {
+            background-image: url(sprite.png);
+            height: 61px;
+            width: 187px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), /* Default way */
+        only screen and (min-resolution: 192dpi) /* dppx fallback */ {
+            .logo {
+                background-image: url(sprite@x2.png);
+            }
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), /* Default way */
+        only screen and (min-resolution: 350dpi) /* dppx fallback */ {
+            .logo {
+                background-image: url(sprite@x3.png);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+</body>
+</html>
