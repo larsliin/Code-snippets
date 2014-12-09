@@ -1,4 +1,6 @@
 //https://developer.chrome.com/devtools/docs/console-api
+var console = console || {};
+console.log = console.log || function (args) { };
 $(document).on('ready', function(){
 	var arr = ['dog','cat','bird','fish','giraf','lion','fox','duck','cow'];
 
