@@ -26,4 +26,4 @@ function resizeFullscreen (o) {
     }
 
     o.image.css({ margin: 'auto', position: 'absolute', 'margin-left': marginLeft + 'px', 'margin-top': marginTop + 'px' });
-},
+}
