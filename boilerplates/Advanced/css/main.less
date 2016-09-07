@@ -1,0 +1,179 @@
+// out: main.css, compress: true, strictMath: true
+/**************************************************************************
+less vars
+**************************************************************************/
+
+@color_blue_light: #2d91c8;
+/**************************************************************************
+webfonts
+**************************************************************************/
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/proximanova/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova/proximanova-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaBlack';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/proximanova/proximanova-black-webfont.eot');
+    src: url('../fonts/proximanova/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova/proximanova-black-webfont.woff') format('woff'), url('../fonts/proximanova/proximanova-black-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/proximanova/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova/proximanova-bold-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaThin';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/proximanova/proximanova-thin-webfont.eot');
+    src: url('../fonts/proximanova/proximanova-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova/proximanova-thin-webfont.woff') format('woff'), url('../fonts/proximanova/proximanova-thin-webfont.ttf') format('truetype');
+}
+/**************************************************************************
+typography
+**************************************************************************/
+
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'ProximaNovaBlack';
+}
+
+h2 {
+    font-family: 'ProximaNovaBold';
+}
+
+h3 {
+    font-family: 'ProximaNovaBold';
+}
+
+h4 {
+    font-family: 'ProximaNovaBold';
+}
+
+h5 {
+    font-family: 'ProximaNovaBold';
+}
+
+h6 {
+    font-family: 'ProximaNovaBold';
+}
+
+p {
+    font-family: 'ProximaNovaRegular';
+}
+
+a {
+    font-family: 'ProximaNovaRegular';
+}
+
+strong {
+    font-family: 'ProximaNovaBold';
+}
+
+label {
+    font-family: 'ProximaNovaRegular';
+    font-weight: normal;
+}
+/**************************************************************************
+bootstrap overrides
+**************************************************************************/
+
+.jumbotron {
+    background-color: @color_blue_light;
+    padding: 0;
+    img {
+        width: 100%;
+    }
+}
+
+.navbar {
+    margin: 0;
+}
+/**************************************************************************
+form elements
+**************************************************************************/
+
+// check for ie8 :checked support and apply custom styling
+.opacity {
+    .chk {
+        input[type='checkbox'] {
+            zoom: 1;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            width: 18px;
+            position: absolute;
+            & + label {
+                margin: 0;
+                padding: 0;
+                display: table;
+                span {
+                    display: table-cell;
+                    padding-left: 10px;
+                    &:first-child {
+                        background: url(../images/checkbox.png) -72px 0 no-repeat;
+                        width: 22px;
+                        height: 22px;
+                        padding: 0;
+                    }
+                }
+            }
+            &:checked + label span:first-child {
+                background-position: -96px 0;
+            }
+        }
+    }
+    .radio {
+        input[type='radio'] {
+            zoom: 1;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            width: 18px;
+            position: absolute;
+            & + label {
+                margin: 0;
+                padding: 0;
+                display: table;
+                span {
+                    display: table-cell;
+                    padding-left: 10px;
+                    &:first-child {
+                        background: url(../images/checkbox.png) -192px 0 no-repeat;
+                        width: 22px;
+                        height: 22px;
+                        padding: 0;
+                    }
+                }
+            }
+            &:checked + label span:first-child {
+                background-position: -216px 0;
+            }
+        }
+    }
+}
+/**************************************************************************
+tweenmax animation
+**************************************************************************/
+
+.animation-wrp {
+    position: relative;
+}
+
+#my_animate {
+    width: 0;
+    position: relative;
+    height: 5px;
+    background-color: @color_blue_light;
+}
